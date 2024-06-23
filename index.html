@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Redirector</title>
+</head>
+<body>
+    <h1>Enter a Number</h1>
+    <input type="text" id="numberInput" placeholder="Enter a number">
+    <button onclick="redirect()">Go</button>
+
+    <script>
+        function redirect() {
+            const number = document.getElementById('numberInput').value;
+            let url;
+
+            switch (number) {
+                case '1':
+                    url = 'https://www.google.com';
+                    break;
+                case '2':
+                    url = 'https://www.yahoo.com';
+                    break;
+                case '3':
+                    url = 'https://www.bing.com';
+                    break;
+                default:
+                    alert('Invalid number. Please enter 1, 2, or 3.');
+                    return;
+            }
+
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
